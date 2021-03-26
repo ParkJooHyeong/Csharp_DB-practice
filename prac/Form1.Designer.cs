@@ -42,6 +42,7 @@ namespace prac
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.openDB = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -52,7 +53,6 @@ namespace prac
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.updateTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -72,8 +72,7 @@ namespace prac
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(870, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(761, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -155,11 +154,17 @@ namespace prac
             this.openDB.Text = "Open Database";
             this.openDB.Click += new System.EventHandler(this.openDB_Click);
             // 
+            // updateTableToolStripMenuItem
+            // 
+            this.updateTableToolStripMenuItem.Name = "updateTableToolStripMenuItem";
+            this.updateTableToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.updateTableToolStripMenuItem.Text = "Update Table";
+            this.updateTableToolStripMenuItem.Click += new System.EventHandler(this.updateTableToolStripMenuItem_Click);
+            // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 24);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -171,19 +176,17 @@ namespace prac
             // 
             this.splitContainer1.Panel2.Controls.Add(this.statusStrip1);
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Size = new System.Drawing.Size(870, 598);
-            this.splitContainer1.SplitterDistance = 271;
-            this.splitContainer1.SplitterWidth = 5;
+            this.splitContainer1.Size = new System.Drawing.Size(761, 474);
+            this.splitContainer1.SplitterDistance = 214;
             this.splitContainer1.TabIndex = 1;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(927, 269);
+            this.textBox1.Size = new System.Drawing.Size(812, 216);
             this.textBox1.TabIndex = 0;
             // 
             // statusStrip1
@@ -193,10 +196,9 @@ namespace prac
             this.toolStripStatusLabel2,
             this.sbTables,
             this.sbPanel3});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 300);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 234);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(870, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(761, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -231,11 +233,10 @@ namespace prac
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 4);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(870, 315);
+            this.dataGridView1.Size = new System.Drawing.Size(761, 252);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView1_CellBeginEdit);
             // 
@@ -243,22 +244,14 @@ namespace prac
             // 
             this.openFileDialog.FileName = "openFileDialog1";
             // 
-            // updateTableToolStripMenuItem
-            // 
-            this.updateTableToolStripMenuItem.Name = "updateTableToolStripMenuItem";
-            this.updateTableToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.updateTableToolStripMenuItem.Text = "Update Table";
-            this.updateTableToolStripMenuItem.Click += new System.EventHandler(this.updateTableToolStripMenuItem_Click);
-            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 622);
+            this.ClientSize = new System.Drawing.Size(761, 498);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
