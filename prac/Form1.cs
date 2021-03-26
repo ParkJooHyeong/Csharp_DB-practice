@@ -163,6 +163,7 @@ namespace prac
                         dr.GetValues(oArr);
                         dataGridView1.Rows.Add(oArr);
                     }
+                    dr.Close();
                 }
                 else
                 {
@@ -195,7 +196,7 @@ namespace prac
                         string idHeader = dataGridView1.Columns[0].HeaderText;
                         object id = dataGridView1.Rows[i].Cells[0].Value;
                       
-                        string s = $"update {TableName} set {currentCellHeader}='{currentCellValue}' where {idHeader}={id}";
+                        string s = $"update {TableName} set {currentCellHeader}=N'{currentCellValue}' where {idHeader}={id}";
                     }
                 }
             }
